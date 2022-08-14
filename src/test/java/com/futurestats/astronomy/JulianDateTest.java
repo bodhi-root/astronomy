@@ -57,7 +57,7 @@ public class JulianDateTest {
 		assertEquals(jdValue, jd.value());
 		
 		AstronomicalDate ad2 = jd.toAstronomicalDate();
-		assertEquals(ad, ad2);
+		assertEquals(ad.toString(), ad2.toString());
 	}
 	
 	/**
@@ -67,7 +67,7 @@ public class JulianDateTest {
 	public void test(double jdValue, LocalDate date, LocalTime time) {
 		ZonedDateTime zdate = ZonedDateTime.of(date, time, UTC);
 		JulianDate jd = JulianDate.from(zdate);
-		assertEquals(jdValue, jd.value());
+		assertEquals(jdValue, jd.value(), 1e-6);
 		
 		ZonedDateTime zdate2 = jd.toDateTime(UTC);
 		assertEquals(zdate, zdate2);

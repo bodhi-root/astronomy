@@ -24,7 +24,7 @@ import java.time.ZoneOffset;
  * pretty straight-forward since we can just calculate the time between two 
  * Instants (one where the JD is known) and apply that difference to the JD
  * of our reference point.  When doing this we assume that days have 86,400
- * seconds.  This may cause small errors (lesson than a minute) due to leap
+ * seconds.  This may cause small errors (less than a minute) due to leap
  * seconds.  As long as the dates in question occur after 1852-10-15 we do
  * not need to worry about the conversion from the Julian to Gregorian calendar
  * that occurred prior to this.  The reference date we use is in fact 1852-10-15

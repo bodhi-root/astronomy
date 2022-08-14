@@ -15,6 +15,9 @@ public class Degrees extends Angle {
 	public static Degrees of(double value) {
 		return new Degrees(value);
 	}
+	public static Degrees of(int degrees, int arcminutes, double arcseconds) {
+		return of(degrees + arcminutes/60.0 + arcseconds/3600.0);
+	}
 	
 	public Degrees normalize() {
 		if (this.value < 0)

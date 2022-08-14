@@ -1,10 +1,10 @@
 # Astronomical Algorithms
 
 This package implements select algorithms from Astronomical Algorithms
-(v2) by Meeus.  I decided to put these algorithms in their own package
+(v2) by Meeus.  I decided to put these algorithms in their own package and
 make them self-sufficient so they do not depend on any of the other
 classes or object-oriented decisions made in the rest of this library.
-This also leaves the main library free to supplement of even switch
+This also leaves the main library free to supplement or even switch
 to different algorithms when desired.
 
 The code is organized into a different class for each chapter of the

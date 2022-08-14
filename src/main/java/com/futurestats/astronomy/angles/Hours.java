@@ -19,10 +19,13 @@ public class Hours extends Angle {
 	public static Hours of(double value) {
 		return new Hours(value);
 	}
-	public static Hours of(int hours, int minutes, int seconds, double nanos) {
+	public static Hours of(int hours, int minutes, double seconds) {
 		return of(hours + 
 				  minutes / 60.0 + 
-				  (seconds + nanos) / 3600.0);
+				  seconds / 3600.0);
+	}
+	public static Hours of(int hours, int minutes, int seconds, double nanos) {
+		return of(hours, minutes, seconds+nanos);
 	}
 	public static Hours of(int hours, int minutes, int seconds) {
 		return of(hours, minutes, seconds, 0.0);

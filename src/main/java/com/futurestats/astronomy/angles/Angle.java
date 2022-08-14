@@ -40,6 +40,13 @@ public abstract class Angle {
 	public abstract Radians toRadians();
 	public abstract Hours toHours();
 	
+	public static Hours fromHms(int hours, int minutes, double seconds) {
+		return Hours.of(hours, minutes, seconds);
+	}
+	public static Degrees fromDms(int degrees, int arcminutes, double arcseconds) {
+		return Degrees.of(degrees, arcminutes, arcseconds);
+	}
+	
 	/**
 	 * Returns a string representing the angle in degrees, minutes,
 	 * and seconds. Format: (+/-)#d #' #".
